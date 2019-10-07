@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta property="og:image" content="{$app.config.url.root}images/fico/{$app.settings.ui_theme}/{$app.fileInfo.typeInfo.icon}" />
+	<meta property="og:image:width" content="512" />
+	<meta property="og:image:height" content="512" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<title>{$app.fileInfo.name|safeHTML}</title>
+	<link rel="stylesheet" type="text/css" href="css/preview.css?v={$app.settings.currentVersion|forURL}" />
+</head>
+<body>
+
+<div class="header">
+	<div class="left">
+		<span class="filename"><img src="../images/fico/{$app.settings.ui_theme}/{$app.fileInfo.typeInfo.icon}" height="18" border="0" /> {$app.fileInfo.name|safeHTML}</span>
+	</div>
+	<div class="right">
+		<div class="details">
+			{$app.fileInfo.niceFileSize}
+		</div>
+		{if $app.linkInfo.download_terms}
+		<a href="javascript:;" onclick="document.getElementById('terms').style.display='block';" class="actionBtn">{t}Download{/t}</a>
+		{else}
+		<a href="{$app.fileInfo.url}&download=1" class="actionBtn">{t}Download{/t}</a>
+		{/if}
+
+		{if sizeof($app.fileComments) > 0}
+		<a href="javascript:;" onclick="document.getElementById('comments').style.display='block';" class="actionBtn commentsBtn">{t}Comments{/t} ({$app.fileComments|count})</a>
+		{/if}
+	</div>
+</div>
+
+<div class="main">
+	{if $app.displayMode == 'frame'}
+	<iframe frameborder="0" src="{$app.fileInfo.url}&download=1&inline=1"></iframe>
+	{else if $app.displayMode == 'image'}
+	<div class="image" style="background-image:url({$app.fileInfo.url}&download=1&inline=1)"></div>
+	{else}
+	<img class="icon" src="../images/fico/{$app.settings.ui_theme}/{$app.fileInfo.typeInfo.icon}">
+	{/if}
+</div>
+
+{if $app.linkInfo.download_terms}
+<div class="overlay" id="terms">
+	<div class="panel">
+		<div class="panel-contents">
+			<div>{$app.linkInfo.download_terms|forHTML}</div>
+		</div>
+		<a class="actionBtn acceptBtn" href="{$app.fileInfo.url}&download=1" onclick="document.getElementById('terms').style.display='none';">{t}Download{/t}</a>
+		<a class="actionBtn cancelBtn" href="javascript:;" onclick="document.getElementById('terms').style.display='none'">{t}Cancel{/t}</a>
+	</div>
+</div>
+{/if}
+
+{if sizeof($app.fileComments) > 0}
+<div class="overlay" id="comments">
+	<div class="panel">
+		<div class="panel-contents">
+			{foreach $app.fileComments AS $p => $comment}
+			<div class="comment">
+				{$comment.val|forHTML|safeHTML}
+				{if $app.showNames}
+				{if $comment.uid != $app.fileComments[$p+1].uid}
+				<div class="author">{$comment.userInfo.fullName|forHTML|safeHTML}</div>
+				{/if}
+				{/if}
+			</div>
+			{if $comment.uid != $app.fileComments[$p+1].uid}
+			<div class="separator"></div>
+			{/if}
+			{/foreach}
+		</div>
+		<a class="actionBtn cancelBtn" href="javascript:;" onclick="document.getElementById('comments').style.display='none'">{t}Close{/t}</a>
+	</div>
+</div>
+{/if}
+
+
+
+<div style="display:none;">
+{if $app.settings.tracker_codes}{$app.settings.tracker_codes}{/if}
+</div>

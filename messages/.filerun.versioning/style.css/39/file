@@ -1,0 +1,264 @@
+            body {
+                padding: 0px;
+                margin: 0px;
+                overflow-y: hidden;
+                overflow-x: hidden;
+                font-family: 'Roboto', sans-serif;
+            }
+            h1, h2, h3, p{
+                color: white;
+                padding: 0.4em;
+                text-align: center;
+                margin: 0px;
+                font-family: 'Roboto', sans-serif;
+            }
+            h2 {
+                color: white;
+                font-family: 'Roboto', sans-serif;
+            }
+            h4 {
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+            }
+            h5 {
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+            }
+            #leftblock {
+                position: absolute;
+                height: 100%;
+                width: 25%;
+                left: -0.1%;
+            }
+            #mainblock {
+                position: absolute;
+                height: 100%;
+                width: 75%;
+                left: 25%;
+            }
+            #profileinfo {
+                position: absolute;
+                height: 15%;
+                width: 100%;
+                background-color: white;
+                color: black;
+            }
+            #search {
+                top: 0%;
+                position: absolute;
+                height: 8%;
+                width: 100%;
+                color: black;
+                background-color: white;
+                background-color: #191919;
+            }
+            #searchform {
+                position: relative;
+                top: 15%;
+                left: 10%;
+                width: 95%;
+            }
+            #searchform > .textinput {
+                background-color: #ebe6e6;
+                position: relative;
+                top: 10px;
+                margin: 0.4em;
+                padding: 0.4em;
+                border: none;
+                outline: none;
+                margin: 0em;
+                border-radius: 0px;
+                height: 30px;
+                width: 80%;
+            }
+            #contacts {
+                position: relative;
+                width: 100,5%;
+                top: 8%;
+                height: 92%;
+                overflow-y: scroll;
+                background-color: #3f3f3f;
+            }
+            #chatinfo {
+                position: relative;
+                background-color: #191919;
+                width: 100.3%;
+                height: 8%;
+                top: 0%;
+                left: -0.3%;
+            }
+            #chat {
+                position: relative;
+                left: -0.2%;
+                top: 0%;
+                width: 100.2%;
+                height: 86%;
+                background-image: url("chatbg1.jpg");
+                background-repeat: no-repeat
+                background-attachment: fixed;
+                background-position: center;
+                overflow-y: scroll;
+            }
+            #chat > p {
+                color: black;
+            }
+            #message {
+                position: fixed;
+                z-index: 0;
+                top: 94%;
+                width: 100%;
+                background-color: white;
+                z-index: 1;
+            }
+            #messageform {
+                display: inline-block;
+                position: relative;
+                width: 70%;
+                z-index: 1;
+            }
+            .button {
+                position: relative;
+                padding: 0.4em;
+                border: none;
+                outline: none;
+                margin: 0.4em;
+                width: 10%;
+                border-radius: 4px;
+                height: 35px;
+            }
+            .plank {
+                border: none;
+                color: white;
+                background-color: white;
+                height: 3px;
+            }
+            .textinput {
+                left: 5%;
+                position: relative;
+                //padding: 0.4em;
+                border: none;
+                outline: none;
+                border-radius: 0px;
+                height: 30px;
+                width: 70%;
+                background-color: inherit;
+            }
+            .outgoing {
+                top: 5px;
+                margin-top: 25px;
+                position: relative;
+                left: 75%;
+                background-color: #FFF;
+                width: 20%;
+                border-radius: 4px;
+                color: black;
+            }
+            .incoming {
+                margin-top: 15px;
+                position: absolute;
+                left: 0%;
+                top: 10px;
+                background-color: #FFF;
+                width: 20%;
+                border-radius: 4px;
+                color: black;
+            }
+            .contact {
+                position: relative;
+                width: 99,5%;
+                height: 12%;
+            }
+            .contact > h3 {
+                display: inline-block;
+                position: absolute;
+                text-align: left;
+                color: white;
+                padding: 10px;
+                left: 20%;
+                top: 3%;
+                margin: 0px;
+            }
+            .contact > p {
+                display: inline-block;
+                position: absolute;
+                text-align: left;
+                color: white;
+                padding: 10px;
+                margin: 0px;
+                top: 30%;
+                left: 20%;
+            }
+            .contact > img {
+                display: inline-block;
+                position: absolute;
+                top: 10%;
+                left: 5%;
+                z-index: 0;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar {
+                width: 7px;
+            }
+ 
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            }
+             
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+                background-color: #00008b;
+            }
+            .EmojiBlock {
+                position: absolute;
+                width: 50%;
+                height: 30%;
+                left: 25%;
+            }
+            .EmojiBlock-content {
+                background-color: white;
+            }
+            .EmojiButton {
+                font-size: 24px;
+                position: relative;
+                border: none;
+                z-index: 1;
+                background-color: white;
+                height: 5%;
+                width: 5%
+            }
+            .EmojiBlock {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            @-webkit-keyframes animatetop {
+                from {top:-300px; opacity:0} 
+                to {top:0; opacity:1}
+            }
+            
+            @keyframes animatetop {
+                from {top:-300px; opacity:0}
+                to {top:0; opacity:1}
+            }
+            .createChatClose {
+                color: white;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            
+            .EmojiClose:hover,
+            .EmojiClose:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
