@@ -71,14 +71,13 @@ else {
         <script src="https://code.jquery.com/jquery-latest.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript">
-        //HERE!!!
+            //HERE!!!
             $('#chat').css('top','99999px');
         </script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap&subset=malayalam" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <title>Swiftmessage Web Client</title>
-        
     </head>
     <body>
         
@@ -217,7 +216,7 @@ else {
                             background-color: #FFF;
                             border-radius: 4px;
                             margin: 0.5em;
-                            display: inline;
+                            display: inline-block;
                             color: black;'><img width = 250px src = '".$attachment['1']."' />
                             </div>");
                             $startid++;
@@ -239,7 +238,7 @@ else {
                             background-color: #FFF;
                             border-radius: 4px;
                             margin: 0.5em;
-                            display: inline;
+                            display: inline-block;
                             color: black;'><img  width = 250px src = '".$attachment['1']."' /></div>
                             </div>
                             ");
@@ -300,7 +299,6 @@ else {
             </div>
             </div>
         </div>
-        <a href="http://statok.net/go/20263"><img src="//statok.net/imageOther/20263" alt="Statok.net" /></a>
         	<script>
         		var modal = document.getElementById('EmojiBlock');
                 var btn = document.getElementById("EmojiButton");

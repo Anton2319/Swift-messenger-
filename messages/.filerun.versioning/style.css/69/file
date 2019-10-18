@@ -24,17 +24,38 @@
                 text-align: center;
                 font-family: 'Roboto', sans-serif;
             }
+            @media(min-width: 1024px) {
             #leftblock {
                 position: absolute;
                 height: 100%;
                 width: 25%;
                 left: -0.1%;
             }
+            }
+            @media(max-width: 1024px) {
+            #leftblock {
+                display: none;
+                position: absolute;
+                height: 100%;
+                width: 25%;
+                left: -0.1%;
+            }
+            }
+            @media(min-width: 1024px) {
             #mainblock {
                 position: absolute;
                 height: 100%;
                 width: 75%;
                 left: 25%;
+            }
+            }
+            @media(max-width: 1024px) {
+            #mainblock {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0%;
+            }
             }
             #profileinfo {
                 position: absolute;
@@ -113,9 +134,10 @@
             #messageform {
                 display: inline-block;
                 position: relative;
-                width: 70%;
+                width: 93%;
                 z-index: 1;
             }
+            @media(min-width: 1024px) {
             .button {
                 position: relative;
                 padding: 0.4em;
@@ -125,6 +147,19 @@
                 width: 10%;
                 border-radius: 4px;
                 height: 35px;
+            }
+            }
+            @media(max-width: 1024px) {
+            .button {
+                position: relative;
+                padding: 0.4em;
+                border: none;
+                outline: none;
+                margin: 0.4em;
+                width: 20%;
+                border-radius: 4px;
+                height: 35px;
+            }
             }
             .plank {
                 border: none;
@@ -140,9 +175,32 @@
                 outline: none;
                 border-radius: 0px;
                 height: 30px;
-                width: 70%;
+                width: 55%;
                 background-color: inherit;
             }
+            @media(max-width: 1024px) {
+            .outgoing {
+                top: 5px;
+                margin-top: 25px;
+                position: relative;
+                left: 59%;
+                background-color: #FFF;
+                width: 39%;
+                border-radius: 4px;
+                color: black;
+            }
+            .incoming {
+                margin-top: 15px;
+                position: absolute;
+                left: 0%;
+                top: 10px;
+                background-color: #FFF;
+                width: 20%;
+                border-radius: 4px;
+                color: black;
+            }
+            }
+            @media(min-width: 1024px) {
             .outgoing {
                 top: 5px;
                 margin-top: 25px;
@@ -162,6 +220,7 @@
                 width: 20%;
                 border-radius: 4px;
                 color: black;
+            }
             }
             .contact {
                 position: relative;
