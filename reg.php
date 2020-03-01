@@ -9,7 +9,7 @@ include("getdblenght.php");
 $db = mysqli_connect("localhost", "site", "open2319", "users");
 $login = $_POST['login'];
 $password = mysqli_real_escape_string($db,$_POST['password']);
-$password = password_hash($password, PASSWORD_DEFAULT);
+//$password = password_hash($password, PASSWORD_DEFAULT);
 $email = $_POST['email'];
 $id = getdblenght("users","auth");
 $id = $id + 1;
